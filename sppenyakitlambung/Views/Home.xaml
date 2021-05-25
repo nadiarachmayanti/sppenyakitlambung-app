@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.Home"
+    Visual="Material"
+      xmlns:local="clr-namespace:sppenyakitlambung.ViewModel"
+    >
+
+   <StackLayout >
+        <!--Background-->
+        <Grid VerticalOptions="FillAndExpand">
+        <Image Source="background.png" Aspect="Fill" />
+
+            <!--row atas(label) & row bawah-->
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+
+            <!--label atas-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="0">
+                <Label TextColor="#0081A7"
+                   FontSize = "35"
+                   Text="Hi, Nadia!"
+                   Margin="35,80,0,0"
+                   FontAttributes="Bold" />
+                <Label TextColor="#0081A7"
+                   FontSize = "30"
+                   Text="Please do a diagnosa of"
+                   Margin="35,0,0,0"
+                    />
+                <Label TextColor="#0081A7"
+                   FontSize = "30"
+                   Text="gastric disease."
+                   Margin="35,0,0,0"
+                    />
+                </StackLayout>
+
+            <!--kotak putih-->
+                <Frame BackgroundColor="White"
+                       Grid.Row="1"
+                       CornerRadius="40">
+
+            <!--home menu-->
+                <StackLayout>
+            <!--kotak menu-->
+                <Frame BackgroundColor="#D8EEF1"
+                       HeightRequest="50"
+                       CornerRadius="30"
+                       HasShadow="False">
+
+            <!--isi kotak (logo, label, arrow)-->
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--logo-->
+                        <Image Source="diagnosa.png"
+                               Grid.Column="0"
+                               HeightRequest="10"/>
+
+                        <Label TextColor="#0081A7"
+                               Grid.Column="1"
+                                FontSize = "20"
+                                Text="Diagnosa"
+                               Margin="30,14,0,0">
+
+                       
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="NavigateToDiagnosa"/>
+                        </Label.GestureRecognizers>
+                            
+                       </Label>
+
+                        <Image Source="arrow.png"
+                               Grid.Column="2"
+                               HeightRequest="10"/>
+                  
+                    </Grid>
+                </Frame>
+            <!--tutup kotak menu-->
+
+            <!--kotak menu -->
+                <Frame BackgroundColor="#D8EEF1"
+                       HeightRequest="50"
+                       CornerRadius="30"
+                       HasShadow="False"
+                       Margin="0,10,0,0">
+
+            <!--isi kotak (logo, label, arrow)-->
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                   </Grid.ColumnDefinitions>
+
+            <!--logo-->
+                        <Image Source="history.png"
+                               Grid.Column="0"
+                               HeightRequest="10"/>
+
+                        <Label TextColor="#0081A7"
+                               Grid.Column="1"
+                                FontSize = "20"
+                                Text="History Diagnosis"
+                               Margin="30,14,0,0">
+
+                            <Label.GestureRecognizers>
+
+                            <TapGestureRecognizer Tapped="NavigateToHistoryDiagnosa"/>
+
+                        </Label.GestureRecognizers>
+
+                            </Label>
+                   
+                    
+
+                        <Image Source="arrow.png"
+                               Grid.Column="2"
+                               HeightRequest="10"/>
+                  
+                    </Grid>
+                </Frame>
+            <!--tutup kotak menu-->
+
+            <!--kotak menu-->
+                <Frame BackgroundColor="#D8EEF1"
+                       HeightRequest="50"
+                       CornerRadius="30"
+                       HasShadow="False"
+                       Margin="0,10,0,0">
+
+            <!--isi kotak (logo, label, arrow)-->
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--logo-->
+                        <Image Source="profile.png"
+                               Grid.Column="0"
+                               HeightRequest="10"/>
+
+                        <Label TextColor="#0081A7"
+                               Grid.Column="1"
+                                FontSize = "20"
+                                Text="Profile"
+                               Margin="30,14,0,0">
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToProfile"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                          
+
+                        <Image Source="arrow.png"
+                               Grid.Column="2"
+                               HeightRequest="10"/>
+                 
+                        </Grid>
+                    </Frame>
+                   
+            <!--tutup kotak menu-->
+
+            <!--kotak menu-->
+                <Frame BackgroundColor="#D8EEF1"
+                       HeightRequest="50"
+                       CornerRadius="30"
+                       HasShadow="False"
+                       Margin="0,10,0,0">
+
+            <!--isi kotak (logo, label, arrow)-->
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--logo-->
+                        <Image Source="about.png"
+                               Grid.Column="0"
+                               HeightRequest="10"/>
+
+                        <Label TextColor="#0081A7"
+                               Grid.Column="1"
+                                FontSize = "20"
+                                Text="About"
+                               Margin="30,14,0,0">
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToAbout"/>
+                            </Label.GestureRecognizers>
+
+                            </Label>
+                        
+                        <Image Source="arrow.png"
+                               Grid.Column="2"
+                               HeightRequest="10"/>
+                  </Grid>
+                    </Frame>
+                   
+            <!--tutup kotak menu-->
+
+            <!--kotak menu-->
+                <Frame BackgroundColor="#D8EEF1"
+                       HeightRequest="50"
+                       CornerRadius="30"
+                       HasShadow="False"
+                       Margin="0,10,0,0">
+
+            <!--isi kotak (logo, label, arrow)-->
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--logo-->
+                        <Image Source="signout.png"
+                               Grid.Column="0"
+                               HeightRequest="10"/>
+
+                        <Label TextColor="#0081A7"
+                               Grid.Column="1"
+                                FontSize = "20"
+                                Text="Sign Out"
+                               Margin="30,14,0,0">
+
+                             <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="NavigateToLogout"/>
+                        </Label.GestureRecognizers>
+                            </Label>
+
+                       
+
+                        <Image Source="arrow.png"
+                               Grid.Column="2"
+                               HeightRequest="10"/>
+                        
+                    </Grid>
+                      
+                </Frame>
+            <!--tutup kotak menu-->
+
+                    </StackLayout>
+                    </Frame>
+</Grid>
+            </Grid>
+       </StackLayout>
+            
+</ContentPage>

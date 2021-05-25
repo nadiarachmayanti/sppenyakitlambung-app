@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.About"
+    Visual="Material"
+      xmlns:local="clr-namespace:sppenyakitlambung.ViewModel"
+    >
+
+     <StackLayout >
+         <Grid VerticalOptions="FillAndExpand">
+             <Image Source="background.png" Aspect="Fill" />
+        
+
+            <!--row atas(label) & row bawah-->
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="220"/>
+                    <RowDefinition Height="450"/>
+
+                    
+                </Grid.RowDefinitions>
+
+        <!--label close-->
+                <StackLayout>
+                    <Grid>
+
+                        
+                    <Image Source="close.png"
+                         
+                       Margin="300,80,0,100">
+                        <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToHome"/>
+                            </Image.GestureRecognizers>
+                    </Image>
+                
+                        </Grid>
+                </StackLayout>   
+                
+
+            <!--kotak putih-->
+                <Frame BackgroundColor="White"
+                       Grid.Row="1"
+                       CornerRadius="40">
+
+            <StackLayout>
+            <!--label about-->
+               <Label TextColor="#0081A7"
+                   FontSize = "33"
+                   Text="About"
+                   FontAttributes="Bold"
+                   Margin="15,40,0,0"
+                    />
+                <Label TextColor="#0081A7"
+                   FontSize = "20"
+                   Text="Ini adalah aplikasi sistem pakar Penyakit Lambung. Aplikasi ini berfungsi untuk membantu pasien mendiagnosa penyakit lambung sebelum diperiksa lebih lanjut di rumah sakit."
+                   Margin="15,55,0,0"
+                    />
+
+                </StackLayout>
+                  
+               
+                
+
+            
+    </Frame>
+                    </Grid>
+            </Grid>
+         </StackLayout>
+</ContentPage>

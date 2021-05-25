@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.HistoryDiagnosa"
+    Visual="Material"
+    xmlns:local="clr-namespace:sppenyakitlambung.ViewModel">
+
+    <StackLayout >
+        <!--Background-->
+        <Grid VerticalOptions="FillAndExpand">
+        <Image Source="background.png" Aspect="Fill" />
+
+            <!--row atas(label) & row bawah-->
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+
+            <!--label atas-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="0">
+                <Label TextColor="#0081A7"
+                   FontSize = "35"
+                   Text="History"
+                   Margin="35,80,0,0"
+                   FontAttributes="Bold" />
+                <Label TextColor="#0081A7"
+                   FontSize = "35"
+                   Text="Diagnosis"
+                       FontAttributes="Bold"
+                   Margin="35,0,0,0"
+                    />
+                </StackLayout>
+
+             <!--label close-->
+                <StackLayout>
+                    <Grid>
+
+                        
+                    <Image Source="close.png"
+                         
+                       Margin="300,80,0,100">
+                        <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToHome"/>
+                            </Image.GestureRecognizers>
+                    </Image>
+                
+                        </Grid>
+                </StackLayout>   
+
+            <!--kotak putih-->
+                <Frame BackgroundColor="White"
+                       Grid.Row="1"
+                       CornerRadius="40">
+
+            <!--home menu-->
+                <StackLayout>
+            <!--kotak menu-->
+                <Frame BackgroundColor="#D8EEF1"
+                       HeightRequest="70"
+                       CornerRadius="30"
+                       HasShadow="False">
+
+            <!--isi kotak (logo, label, arrow)-->
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="30"/>
+                        </Grid.ColumnDefinitions>
+
+            <!--label-->
+                        <Label TextColor="#0081A7"
+                               Grid.Column="0"
+                                FontSize = "24"
+                                Text="Maag"
+                               FontAttributes="Bold"
+                               Margin="15,5,0,0"/>
+                        <Label TextColor="#0081A7"
+                               Grid.Column="0"
+                                FontSize = "20"
+                                Text="01 May 2021, 17:00"
+                               Margin="15,40,0,0"/>
+                        <Image Source="arrow.png"
+                               Grid.Column="1"
+                               HeightRequest="10"/>
+                  
+                    </Grid>
+                </Frame>
+            <!--tutup kotak menu-->
+
+           
+                    </StackLayout>
+                    </Frame>
+</Grid>
+            </Grid>
+        </StackLayout>
+
+</ContentPage>

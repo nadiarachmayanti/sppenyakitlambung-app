@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sppenyakitlambung.MainPage"
+             Visual="Material"
+             xmlns:local="clr-namespace:sppenyakitlambung.ViewModel"
+
+             >
+    <StackLayout >
+       <Grid VerticalOptions="FillAndExpand">
+            <Image Source="background.png" Aspect="AspectFill" />
+
+            <!--membagi baris halaman -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>             
+                <StackLayout BackgroundColor="Transparent" Grid.Row="0"/>
+                
+
+                <!--Logo-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="1">
+                     <Image Source="logo.png"
+                   Aspect="AspectFit"
+                   HorizontalOptions="CenterAndExpand"
+                   HeightRequest="200"/>
+
+                     <Label TextColor="#0081A7"
+                   FontSize = "25"
+                   Text="Gastric Disease Diagnosis"
+                   HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold" />
+                </StackLayout>
+
+                <!--Button-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="2">
+                <Button Text="Get Started"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        CornerRadius="25"
+                        WidthRequest="200"
+                        HeightRequest="45"
+                        BackgroundColor="#0081A7"
+                        Clicked="NavigateToLogin"
+                />
+
+                </StackLayout>
+            </Grid>
+
+           
+
+           
+        </Grid >
+         
+    </StackLayout>
+
+</ContentPage>
+

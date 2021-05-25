@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.Profile"
+    Visual="Material"
+    xmlns:local="clr-namespace:sppenyakitlambung.ViewModel">
+
+     <StackLayout >
+        <Grid VerticalOptions="FillAndExpand">
+            <Image Source="background.png" Aspect="Fill" />
+
+     <!-- Place here the rest of the layout for the page. -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+
+     <!--label profile-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="0">
+                <Label TextColor="#0081A7"
+                   FontSize = "40"
+                   Text="Profile"
+                   Margin="35,120,0,0"
+                   FontAttributes="Bold" />
+                   
+                </StackLayout>
+
+     <!--form profile-->
+               <ScrollView IsEnabled="True" Grid.Row="1">
+                    <StackLayout BackgroundColor="Transparent" Padding="10" >
+                            <Entry Placeholder="Fullname"
+                           Text="{Binding Fullname}"
+                           Margin="20,30,20,10"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"/>
+                    <Entry Placeholder="Username"
+                           Text="{Binding Username}"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    <Entry Placeholder="Email"
+                           Text="{Binding Email}"
+                           Keyboard="Email"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    <Entry Placeholder="Password"
+                           Text="{Binding Password}"
+                           IsPassword="True"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    <StackLayout RadioButtonGroup.GroupName="{Binding Gender}"
+                                 RadioButtonGroup.SelectedValue="{Binding SelectedGender}"
+                                 Margin="35,10,0,0">
+                                 
+                    <Label Text="Gender"
+                           TextColor="#0081A7"
+                           FontAttributes="Bold"/>
+                    <RadioButton Content="Male"
+                                 Value="Male"
+                                 TextColor="#0081A7"
+                                 FontAttributes="Bold"
+                                
+                                 BackgroundColor="Transparent"/>
+                    <RadioButton Content="Female"
+                                 Value="Female"
+                                 TextColor="#0081A7"
+                                 FontAttributes="Bold"
+                                 BackgroundColor="Transparent"/>
+   
+                     <Label x:Name="genderLabel">
+                       
+                    </Label>
+
+
+                  </StackLayout>
+                    <Entry Placeholder="Age"
+                           Text="{Binding Age}"
+                           Keyboard="Numeric"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    <Entry Placeholder="Phone Number"
+                           Text="{Binding PhoneNumber}"
+                           Keyboard="Telephone"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    <Entry Placeholder="Address"
+                           Text="{Binding Address}"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    
+                           
+                    </StackLayout>
+                   </ScrollView>
+                    
+                    
+                    
+                <!--Button-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="2">
+                <Button Text="Save"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        CornerRadius="25"
+                        WidthRequest="350"
+                        HeightRequest="45"
+                        BackgroundColor="#0081A7"
+                        Clicked="NavigateToHome"/>
+                    <Grid
+                        Margin="40,20,0,0">
+                    
+                    
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="240"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+       
+              
+                
+     
+</Grid>
+                    </StackLayout>
+                </Grid>
+   </Grid>
+         </StackLayout>
+</ContentPage>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.Register"
+    Visual="Material"
+    xmlns:local="clr-namespace:sppenyakitlambung.ViewModel">
+
+    <StackLayout >
+        <Grid VerticalOptions="FillAndExpand">
+            <Image Source="background.png" Aspect="Fill" />
+
+            <!-- Place here the rest of the layout for the page. -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="400"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+            <!--label welcome-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="0">
+                <Label TextColor="#0081A7"
+                   FontSize = "32"
+                   Text="Register"
+                   Margin="35,70,0,0"
+                   FontAttributes="Bold" />
+                <Label TextColor="#0081A7"
+                   FontSize = "32"
+                   Text="your"
+                   Margin="35,0,0,0"
+                   FontAttributes="Bold" />
+                <Label TextColor="#0081A7"
+                   FontSize = "32"
+                   Text="Account!"
+                   Margin="35,0,0,0"
+                   FontAttributes="Bold" />
+                </StackLayout>
+
+            <!--form register-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="1" Padding="10">
+
+                    
+                    <Entry Placeholder="Fullname"
+                           Text="{Binding Fullname}"
+                           Margin="20,35,20,10"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           />
+                    <Entry Placeholder="Username"
+                           Text="{Binding Username}"
+                           
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    <Entry Placeholder="Email"
+                           Text="{Binding Email}"
+                      
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                    <Entry Placeholder="Password"
+                           Text="{Binding Password}"
+                           IsPassword="True"
+                           BackgroundColor="Transparent"
+                           TextColor="#0081A7"
+                           PlaceholderColor="#0081A7"
+                           FontAttributes="Bold"
+                           Margin="20,0,20,10"/>
+                </StackLayout>
+
+                <!--Button-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="2">
+                <Button Text="Register"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        CornerRadius="25"
+                        WidthRequest="350"
+                        HeightRequest="45"
+                        BackgroundColor="#0081A7"
+                        Clicked="NavigateToProfile"/>
+                    <Grid
+                        Margin="40,20,0,0"
+                        >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="240"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--dont have an account-->
+                        <Label TextColor="#0081A7"
+                           Grid.Column="0"
+                           FontSize = "18"
+                           Text="Already have an account?"
+                            HorizontalOptions="End"
+                           Margin="0,0,0,0"
+                          />
+                        <Label TextColor="#0081A7"
+                           Grid.Column="1"
+                           FontSize = "18"
+                           Text="Sign In"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,0"
+                          >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToLogin"/>
+                            </Label.GestureRecognizers>
+                          
+                        </Label>
+                        </Grid>
+                    
+                   
+                </StackLayout>
+
+                
+                
+            </Grid>
+
+           
+
+           
+        </Grid >
+         
+    </StackLayout>
+
+</ContentPage>

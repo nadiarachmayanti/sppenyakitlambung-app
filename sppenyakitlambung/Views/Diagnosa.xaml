@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.Diagnosa"
+    Visual="Material"
+      xmlns:local="clr-namespace:sppenyakitlambung.ViewModel">
+
+    <StackLayout >
+        <!--Background-->
+        <Grid VerticalOptions="FillAndExpand">
+        <Image Source="background.png" Aspect="Fill" />
+
+            <!--row atas(label) & row bawah-->
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                
+            <!--label atas-->
+                <StackLayout BackgroundColor="Transparent" Grid.Row="0">
+                <Label TextColor="#0081A7"
+                   FontSize = "35"
+                   Text="Diagnosis"
+                   Margin="35,110,0,0"
+                   FontAttributes="Bold" />
+                </StackLayout>
+
+            <!--kotak putih-->
+                <Frame BackgroundColor="White"
+                       Grid.Row="1"
+                       CornerRadius="40">
+
+            <StackLayout>
+            <!--label back-->
+                <Image Source="back.png"
+                       Margin="0,20,325,0">
+
+                <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                            </Image.GestureRecognizers>
+                    </Image>
+               
+                
+            <!--label about-->
+               <Label TextColor="#0081A7"
+                   FontSize = "25"
+                   Text="{Binding NoPertanyaan}"
+                   HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   Margin="15,15,0,0"
+                    />
+                <Label TextColor="#0081A7"
+                               FontSize = "20"
+                               FontAttributes="Bold"
+                               Text="{Binding Pertanyaan.pertanyaan}"
+                               Margin="15,40,0,10"
+                                />
+                <RadioButton Content="Sangat Yakin"
+                                TextColor="#0081A7"
+                                Margin="10,0,0,0"/>
+                <RadioButton Content="Yakin"
+                                TextColor="#0081A7"
+                                Margin="10,0,0,0"/>
+                <RadioButton Content="Cukup Yakin"
+                                TextColor="#0081A7"
+                                Margin="10,0,0,0"/>
+                <RadioButton Content="Sedikit Yakin"
+                                TextColor="#0081A7"
+                                Margin="10,0,0,0"/>
+                <RadioButton Content="Tidak Tahu"
+                                TextColor="#0081A7"
+                                Margin="10,0,0,0"/>
+                <RadioButton Content="Tidak"
+                                TextColor="#0081A7"
+                                IsChecked="True"
+                                Margin="10,0,0,0"/>
+                
+
+                <!--Button-->
+                <StackLayout BackgroundColor="Transparent">
+                <Button Text="Next"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        CornerRadius="25"
+                        WidthRequest="150"
+                        HeightRequest="45"
+                        BackgroundColor="#0081A7"
+                        Command="{Binding NextCommand}"
+                        Margin="0,40,0,0"
+                       />    
+            </StackLayout>
+
+</StackLayout>
+    </Frame>
+                   
+                   
+                    </Grid>
+            </Grid>
+        </StackLayout>
+</ContentPage>

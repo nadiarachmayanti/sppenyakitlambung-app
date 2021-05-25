@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.HasilDiagnosa"
+    Visual="Material"
+      xmlns:local="clr-namespace:sppenyakitlambung.ViewModel">
+
+
+
+<StackLayout >
+
+        <!--Background-->
+            <Grid VerticalOptions="FillAndExpand">
+            <Image Source="background.png" Aspect="Fill" />
+
+        <!--row atas(label) & row bawah-->
+            <Grid>
+            <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="*"/>
+                    
+            </Grid.RowDefinitions>
+
+        <!--label atas-->
+            <StackLayout BackgroundColor="Transparent" Grid.Row="0">
+            <Label TextColor="#0081A7"
+                   FontSize = "35"
+                   Text="Diagnostic"
+                   Margin="35,110,0,0"
+                   FontAttributes="Bold"
+                       />
+            <Label TextColor="#0081A7"
+                   FontSize = "35"
+                   Text="Results"
+                   Margin="35,0,0,0"
+                   FontAttributes="Bold"
+                       />
+            </StackLayout>
+
+        <!--icon tap close-->
+            <StackLayout>
+            <Image Source="close.png"
+                   Margin="300,80,0,100">
+            <Image.GestureRecognizers>
+                   <TapGestureRecognizer Tapped="NavigateToHome"/>
+            </Image.GestureRecognizers>
+            </Image>
+            </StackLayout>   
+
+        <!--kotak putih-->
+            <Frame BackgroundColor="White"
+                   Grid.Row="1"
+                   CornerRadius="40">
+
+        <!--label hasil diagnosa-->
+            <ScrollView IsEnabled="True">
+            <StackLayout >
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="18:00/01 May 2021"
+                   HorizontalOptions="EndAndExpand"
+                   Margin="15,15,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Name : Nadia"
+                   Margin="0,20,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Gender : Female"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Age : 21 years"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Address : Jl. Condongcatur Yogyakarta"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Gejala yang dipilih :"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="1. Mual dan muntah"
+                   Margin="10,0,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="2. Nyeri Ulu Hati"
+                   Margin="10,0,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="3. dll,"
+                   Margin="10,0,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="HASIL AKHIR"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Kemungkinan anda terdeteksi penyakit MAAG dengan derajat keyakinan 68.99%"
+                    />
+            <Label TextColor="Red"
+                   FontSize = "18"
+                   Text="JIKA PRESENTASE SUDAH MENUNJUKKAN 50% ATAU LEBIH, SILAHKAN LANGSUNG KERUMAH SAKIT TERDEKAT UNTUK KONSULTASI LEBOH LANJUT"
+                   FontAttributes="Bold"
+                   Margin="0,25,0,0"
+                   HorizontalTextAlignment="Center"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Keterangan :"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Maag adalah lorem ipsum dolor sit amet. consectetor adipiscing elit. In posuere a arcu sit amet luctus."
+                    Margin="0,0,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   FontAttributes="Bold"
+                   Text="Sarah Pencegahan :"
+                   Margin="0,0,0,0"
+                    />
+            <Label TextColor="#0081A7"
+                   FontSize = "18"
+                   Text="Maag adalah lorem ipsum dolor sit amet. consectetor adipiscing elit. In posuere a arcu sit amet luctus."
+                   Margin="0,0,0,0"
+                    />
+                
+  </StackLayout>
+    </ScrollView>
+            
+</Frame>
+            </Grid>
+            </Grid>
+</StackLayout>
+    
+</ContentPage>

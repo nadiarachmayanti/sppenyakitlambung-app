@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="sppenyakitlambung.Logout"
+    Visual="Material"
+      xmlns:local="clr-namespace:sppenyakitlambung.ViewModel">
+
+    <StackLayout >
+         <Grid VerticalOptions="FillAndExpand">
+             <Image Source="background.png" Aspect="Fill" />
+        
+
+            <!--row atas(label) & row bawah-->
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="220"/>
+                    <RowDefinition Height="300"/>
+
+                    
+                </Grid.RowDefinitions>
+
+    
+                
+
+            <!--kotak putih-->
+                <Frame BackgroundColor="White"
+                       
+                       Grid.Row="1"
+                       Margin="0,80,0,0"
+                       CornerRadius="40">
+
+            <StackLayout>
+            <!--label signout-->
+               <Label TextColor="#0081A7"
+                   FontSize = "20"
+                   Text="Are you sure to Sign Out?"
+                   Margin="60,25,0,0"
+                    />
+
+            <!--Button yes-->
+                <Button Text="Yes"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        VerticalOptions="StartAndExpand"
+                        Margin="5,35,0,0"
+                        CornerRadius="25"
+                        WidthRequest="150"
+                        HeightRequest="45"
+                        BackgroundColor="#0081A7"
+                        Clicked="NavigateToMainPage"/>
+
+                <!--Button no-->
+                <Button Text="No"
+                        FontAttributes="Bold"
+                        HorizontalOptions="End"
+                       VerticalOptions="EndAndExpand"
+                        Margin="0,0,0,0"
+                        CornerRadius="25"
+                        WidthRequest="150"
+                        HeightRequest="45"
+                        BackgroundColor="#0081A7"
+                        Clicked="NavigateToHome"/>
+
+
+
+                </StackLayout>
+            
+
+            
+    </Frame>
+                    </Grid>
+            </Grid>
+         </StackLayout>
+</ContentPage>
+
+
