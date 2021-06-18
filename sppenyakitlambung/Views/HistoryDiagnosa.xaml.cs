@@ -11,12 +11,17 @@ namespace sppenyakitlambung
         public HistoryDiagnosa()
         {
             InitializeComponent();
-            BindingContext = new HomeViewModel();
+            BindingContext = new HistoryDiagnosaViewModel();
             NavigationPage.SetHasNavigationBar(this, false);
         }
         public void NavigateToHome(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Home());
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Console.WriteLine(e.SelectedItem);
         }
 
     }

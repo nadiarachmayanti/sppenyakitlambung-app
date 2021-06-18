@@ -1,9 +1,8 @@
 ﻿using System;
-namespace sppenyakitlambung.Models
+namespace sppenyakitlambung.Utilities.Models
 {
-    public class Pengguna
+    public class MobileRegisterRequest
     {
-        public string _id { get; set; }
         public string fullname { get; set; }
         public string username { get; set; }
         public string email { get; set; }
@@ -13,7 +12,5 @@ namespace sppenyakitlambung.Models
         public string phone_number { get; set; }
         public string address { get; set; }
         public string status { get; set; }
-        public string createdAt { get; set; }
-        public string updatedAt { get; set; }
     }
 }

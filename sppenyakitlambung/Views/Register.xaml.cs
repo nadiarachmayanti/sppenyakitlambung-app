@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using sppenyakitlambung.Utils;
 using sppenyakitlambung.ViewModel;
 using Xamarin.Forms;
 
@@ -10,6 +11,7 @@ namespace sppenyakitlambung
     {
         public Register()
         {
+            
             InitializeComponent();
             BindingContext = new RegisterViewModel();
             NavigationPage.SetHasNavigationBar(this, false);

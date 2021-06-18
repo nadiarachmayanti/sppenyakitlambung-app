@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using sppenyakitlambung.Utils;
 using sppenyakitlambung.ViewModel;
 using Xamarin.Forms;
 
@@ -21,7 +22,16 @@ namespace sppenyakitlambung
 
         public void NavigateToLogin(object sender , EventArgs e)
         {
-            Navigation.PushAsync(new Login());
+
+            if (PreferencesWriter.UserId != "")
+            {
+                Navigation.PushAsync(new Home());
+            }
+            else
+            {
+                Navigation.PushAsync(new Login());
+            }
+            
         }
             
     }

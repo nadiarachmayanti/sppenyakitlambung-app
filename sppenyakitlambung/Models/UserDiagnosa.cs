@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using sppenyakitlambung.Utilities.Models;
+using sppenyakitlambung.Models.SubModel;
 
 namespace sppenyakitlambung.Models
 {
-    public class DaftarPertanyaan : BaseModel
+    public class UserDiagnosa
     {
         public string _id { get; set; }
-        public List<String> gejalaId { get; set; }
-        public string pertanyaan { get; set; }
+        public string userId { get; set; }
+        public List<CfUser> temp_cfuser { get; set; }
         public string createdAt { get; set; }
         public string updatedAt { get; set; }
     }
-
 }

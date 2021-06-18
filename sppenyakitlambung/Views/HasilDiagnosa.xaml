@@ -11,11 +11,11 @@
 <StackLayout >
 
         <!--Background-->
-            <Grid VerticalOptions="FillAndExpand">
+            <Grid VerticalOptions="FillAndExpand"  >
             <Image Source="background.png" Aspect="Fill" />
 
         <!--row atas(label) & row bawah-->
-            <Grid>
+            <Grid IsVisible="{Binding ShowContent}">
             <Grid.RowDefinitions>
             <RowDefinition Height="250"/>
             <RowDefinition Height="*"/>
@@ -64,22 +64,22 @@
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
-                   Text="Name : Nadia"
+                   Text="{Binding HasilKonsultasi.user.fullname}"
                    Margin="0,20,0,0"
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
-                   Text="Gender : Female"
+                   Text="{Binding HasilKonsultasi.user.gender}"
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
-                   Text="Age : 21 years"
+                   Text="{Binding HasilKonsultasi.user.umur}"
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
-                   Text="Address : Jl. Condongcatur Yogyakarta"
+                   Text="{Binding HasilKonsultasi.user.address}"
                     />
-            <Label TextColor="#0081A7"
+            <!--<Label TextColor="#0081A7"
                    FontSize = "18"
                    Text="Gejala yang dipilih :"
                    FontAttributes="Bold"
@@ -99,7 +99,8 @@
                    FontSize = "18"
                    Text="3. dll,"
                    Margin="10,0,0,0"
-                    />
+                    />-->
+
             <Label TextColor="#0081A7"
                    FontSize = "18"
                    Text="HASIL AKHIR"
@@ -108,13 +109,13 @@
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
-                   Text="Kemungkinan anda terdeteksi penyakit MAAG dengan derajat keyakinan 68.99%"
+                   Text="{Binding HasilAkhir}"
                     />
             <Label TextColor="Red"
                    FontSize = "18"
                    Text="JIKA PRESENTASE SUDAH MENUNJUKKAN 50% ATAU LEBIH, SILAHKAN LANGSUNG KERUMAH SAKIT TERDEKAT UNTUK KONSULTASI LEBOH LANJUT"
                    FontAttributes="Bold"
-                   Margin="0,25,0,0"
+                   Margin="0,25,0,20"
                    HorizontalTextAlignment="Center"
                     />
             <Label TextColor="#0081A7"
@@ -125,18 +126,18 @@
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
-                   Text="Maag adalah lorem ipsum dolor sit amet. consectetor adipiscing elit. In posuere a arcu sit amet luctus."
-                    Margin="0,0,0,0"
+                   Text="{Binding HasilKonsultasi.hasil_konsultasi.penyakit.deskripsi}"
+                    Margin="0,0,0,20"
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
                    FontAttributes="Bold"
-                   Text="Sarah Pencegahan :"
+                   Text="Sarah Pencegahan : "
                    Margin="0,0,0,0"
                     />
             <Label TextColor="#0081A7"
                    FontSize = "18"
-                   Text="Maag adalah lorem ipsum dolor sit amet. consectetor adipiscing elit. In posuere a arcu sit amet luctus."
+                   Text="{Binding HasilKonsultasi.hasil_konsultasi.penyakit.saran}"
                    Margin="0,0,0,0"
                     />
                 

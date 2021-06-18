@@ -6,17 +6,34 @@
     Visual="Material"
     xmlns:local="clr-namespace:sppenyakitlambung.ViewModel">
 
-     <StackLayout >
+     <StackLayout>
         <Grid VerticalOptions="FillAndExpand">
             <Image Source="background.png" Aspect="Fill" />
 
      <!-- Place here the rest of the layout for the page. -->
-            <Grid>
+            <!--Main Content-->             
+            <Grid IsVisible="{Binding ShowContent}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="200"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
+
+            <!--label close-->
+                <StackLayout>
+                    <Grid>
+
+                        
+                    <Image Source="close.png"
+                         
+                       Margin="300,80,0,0">
+                        <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToHome"/>
+                            </Image.GestureRecognizers>
+                         </Image>
+                
+                        </Grid>
+                </StackLayout>   
 
      <!--label profile-->
                 <StackLayout BackgroundColor="Transparent" Grid.Row="0">
@@ -24,29 +41,32 @@
                    FontSize = "40"
                    Text="Profile"
                    Margin="35,120,0,0"
-                   FontAttributes="Bold" />
-                   
+                   FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToHome"/>
+                     </Label.GestureRecognizers>
+                </Label>
                 </StackLayout>
 
      <!--form profile-->
                <ScrollView IsEnabled="True" Grid.Row="1">
                     <StackLayout BackgroundColor="Transparent" Padding="10" >
                             <Entry Placeholder="Fullname"
-                           Text="{Binding Fullname}"
+                           Text="{Binding Users.fullname}"
                            Margin="20,30,20,10"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
                            PlaceholderColor="#0081A7"
                            FontAttributes="Bold"/>
                     <Entry Placeholder="Username"
-                           Text="{Binding Username}"
+                           Text="{Binding Users.username}"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
                            PlaceholderColor="#0081A7"
                            FontAttributes="Bold"
                            Margin="20,0,20,10"/>
                     <Entry Placeholder="Email"
-                           Text="{Binding Email}"
+                           Text="{Binding Users.email}"
                            Keyboard="Email"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
@@ -54,14 +74,14 @@
                            FontAttributes="Bold"
                            Margin="20,0,20,10"/>
                     <Entry Placeholder="Password"
-                           Text="{Binding Password}"
+                           Text="{Binding Users.password}"
                            IsPassword="True"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
                            PlaceholderColor="#0081A7"
                            FontAttributes="Bold"
                            Margin="20,0,20,10"/>
-                    <StackLayout RadioButtonGroup.GroupName="{Binding Gender}"
+                    <StackLayout RadioButtonGroup.GroupName="{Binding GroupName}"
                                  RadioButtonGroup.SelectedValue="{Binding SelectedGender}"
                                  Margin="35,10,0,0">
                                  
@@ -70,24 +90,20 @@
                            FontAttributes="Bold"/>
                     <RadioButton Content="Male"
                                  Value="Male"
+                                 IsChecked="{Binding IsMale}"
                                  TextColor="#0081A7"
                                  FontAttributes="Bold"
-                                
                                  BackgroundColor="Transparent"/>
                     <RadioButton Content="Female"
                                  Value="Female"
+                                 IsChecked="{Binding IsFemale}"
                                  TextColor="#0081A7"
                                  FontAttributes="Bold"
                                  BackgroundColor="Transparent"/>
-   
-                     <Label x:Name="genderLabel">
-                       
-                    </Label>
-
 
                   </StackLayout>
                     <Entry Placeholder="Age"
-                           Text="{Binding Age}"
+                           Text="{Binding Users.umur}"
                            Keyboard="Numeric"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
@@ -95,7 +111,7 @@
                            FontAttributes="Bold"
                            Margin="20,0,20,10"/>
                     <Entry Placeholder="Phone Number"
-                           Text="{Binding PhoneNumber}"
+                           Text="{Binding Users.phone_number}"
                            Keyboard="Telephone"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
@@ -103,7 +119,7 @@
                            FontAttributes="Bold"
                            Margin="20,0,20,10"/>
                     <Entry Placeholder="Address"
-                           Text="{Binding Address}"
+                           Text="{Binding Users.address}"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
                            PlaceholderColor="#0081A7"
@@ -126,7 +142,7 @@
                         WidthRequest="350"
                         HeightRequest="45"
                         BackgroundColor="#0081A7"
-                        Clicked="NavigateToHome"/>
+                        Command="{Binding SaveUserCommand}"/>
                     <Grid
                         Margin="40,20,0,0">
                     
@@ -143,6 +159,10 @@
 </Grid>
                     </StackLayout>
                 </Grid>
+                <!-- Loading -->
+                <!--<Grid IsVisible="{Binding IsLoading}" VerticalOptions="FillAndExpand">
+                    <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"   Color="#0081A7" IsRunning="true"></ActivityIndicator>
+                </Grid>-->
    </Grid>
          </StackLayout>
 </ContentPage>

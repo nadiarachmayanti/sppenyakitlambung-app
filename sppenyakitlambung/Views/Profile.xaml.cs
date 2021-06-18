@@ -10,7 +10,9 @@ namespace sppenyakitlambung
         public Profile()
         {
             InitializeComponent();
-            BindingContext = new RegisterViewModel();
+            BindingContext = new ProfileViewModel {
+                GroupName = "gender"
+            };
             NavigationPage.SetHasNavigationBar(this, false);
 
         }

@@ -41,17 +41,16 @@
             <!--form register-->
                 <StackLayout BackgroundColor="Transparent" Grid.Row="1" Padding="10">
 
-                    
-                    <Entry Placeholder="Fullname"
-                           Text="{Binding Fullname}"
-                           Margin="20,35,20,10"
+                     <Entry Placeholder="Fullname"
+                           Text="{Binding Users.fullname}"
+                           
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
                            PlaceholderColor="#0081A7"
                            FontAttributes="Bold"
-                           />
+                           Margin="20,0,20,10"/>
                     <Entry Placeholder="Username"
-                           Text="{Binding Username}"
+                           Text="{Binding Users.username}"
                            
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
@@ -59,7 +58,7 @@
                            FontAttributes="Bold"
                            Margin="20,0,20,10"/>
                     <Entry Placeholder="Email"
-                           Text="{Binding Email}"
+                           Text="{Binding Users.email}"
                       
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
@@ -67,7 +66,7 @@
                            FontAttributes="Bold"
                            Margin="20,0,20,10"/>
                     <Entry Placeholder="Password"
-                           Text="{Binding Password}"
+                           Text="{Binding Users.password}"
                            IsPassword="True"
                            BackgroundColor="Transparent"
                            TextColor="#0081A7"
@@ -86,7 +85,7 @@
                         WidthRequest="350"
                         HeightRequest="45"
                         BackgroundColor="#0081A7"
-                        Clicked="NavigateToProfile"/>
+                        Command="{Binding RegisterCommand}"/>
                     <Grid
                         Margin="40,20,0,0"
                         >

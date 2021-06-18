@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:viewmodels="clr-namespace:sppenyakitlambung.ViewModel"
+    xmlns:views="clr-namespace:sppenyakitlambung.Views"
+    x:Class="sppenyakitlambung.Views.LoadingPopup"
+    Visual="Material"
+    CloseWhenBackgroundIsClicked="False"
+    >
+
+    <Frame
+        CornerRadius="20"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        BackgroundColor="Transparent"
+        >
+        <AbsoluteLayout>
+            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"   Color="#0081A7" IsRunning="true"></ActivityIndicator>
+            <!-- Close Button -->
+            <!--<Label Text="&#10005;"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   Margin="0, 15, 15, 0"
+                   AbsoluteLayout.LayoutBounds="1, 0"
+                   AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ClosePopup" />
+                </Label.GestureRecognizers>
+            </Label>-->
+        </AbsoluteLayout>
+        
+    </Frame>
+
+</pages:PopupPage>
